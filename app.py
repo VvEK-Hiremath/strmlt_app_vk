@@ -2,7 +2,7 @@ import streamlit as st
 from kiteconnect import KiteConnect
 
 st.set_page_config(
-    page_title="My Zerodha Portfolio",
+    page_title="My Zerodha Portfolio1",
     page_icon="📈"
 )
 
