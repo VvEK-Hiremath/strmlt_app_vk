@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon="📈"
 )
 
-st.title("📈 My Zerodha Portfolio")
+st.title("📈 My Zerodha Portfolio1")
 
 # Load credentials from Streamlit Secrets
 API_KEY = st.secrets["KITE_API_KEY"]
