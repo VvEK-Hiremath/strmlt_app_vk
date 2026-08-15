@@ -7,7 +7,7 @@ from kite.auth import (
     get_access_token,
     logout,
 )
-from pages.portfolio import (
+from ui.portfolio import (
     show_profile,
     show_equity_holdings,
     show_mutual_fund_holdings,
