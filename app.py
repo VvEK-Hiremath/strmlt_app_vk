@@ -2,11 +2,11 @@ import streamlit as st
 from kiteconnect import KiteConnect
 
 st.set_page_config(
-    page_title="My Zerodha Portfolio1",
+    page_title="My Zerodha Portfolio",
     page_icon="📈"
 )
 
-st.title("📈 My Zerodha Portfolio1")
+st.title("📈 My Zerodha Portfolio")
 
 # Load credentials from Streamlit Secrets
 API_KEY = st.secrets["KITE_API_KEY"]
