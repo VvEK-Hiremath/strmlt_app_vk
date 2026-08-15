@@ -7,7 +7,11 @@ from kite.auth import (
     get_access_token,
     logout,
 )
-from pages.portfolio import show_profile, show_holdings
+from pages.portfolio import (
+    show_profile,
+    show_equity_holdings,
+    show_mutual_fund_holdings,
+)
 
 
 # --------------------------------------------------
@@ -83,7 +87,9 @@ st.success("🟢 Zerodha connected")
 
 show_profile(kite)
 
-show_holdings(kite)
+show_equity_holdings(kite)
+
+show_mutual_fund_holdings(kite)
 
 
 # --------------------------------------------------
