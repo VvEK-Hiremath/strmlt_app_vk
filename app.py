@@ -122,7 +122,7 @@ st.header("📊 Holdings")
 
 try:
 
-    holdings = kite.holdings()
+    holdings = kite.mf_holdings()
 
     if not holdings:
 
