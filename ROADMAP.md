@@ -5,55 +5,49 @@
 Build a personal Streamlit web application connected to Zerodha Kite Connect.
 
 Start with:
-Portfolio monitoring
+- Portfolio monitoring
 
 Eventually reach:
-Strategy development
-Backtesting
-Paper trading
-Risk management
-Live algo trading
+- Strategy development
+- Backtesting
+- Paper trading
+- Risk management
+- Live algo trading
 
-## CURRENT STATUS
+## Current Status
 
-[✓] GitHub repository
-[✓] Streamlit Cloud deployment
-[✓] Streamlit Secrets
-[✓] Kite Connect authentication
-[✓] Request token → access token
-[✓] Modular code structure
-[✓] Zerodha profile
-[✓] Mutual fund holdings
-[✓] Basic portfolio UI
+- [✓] GitHub repository
+- [✓] Streamlit Cloud deployment
+- [✓] Streamlit Secrets
+- [✓] Kite Connect authentication
+- [✓] Request token → access token
+- [✓] Modular code structure
+- [✓] Zerodha profile
+- [✓] Mutual fund holdings
+- [✓] Basic portfolio UI
 
-## HIGH-LEVEL ARCHITECTURE
+## High-Level Architecture
 
+```text
+                 STREAMLIT APPLICATION
+                          |
+          +---------------+---------------+
+          |                               |
+      PORTFOLIO                        TRADING
+          |                               |
+   +------+--------+             +--------+--------+
+   |      |        |             |        |        |
+ Equity   MF   Positions      Signals   Risk    Orders
+    |         |                  |        |        |
+    |         |                  |        |        |
+    v         v                  v        v        v
+Paper Trading                Backtesting   Live Trading
+                           |
+                           v
+                     Kite Connect
 ```
-                STREAMLIT APPLICATION
-                       |
-         +-------------+-------------+
-         |                           |
-    PORTFOLIO                    TRADING
-         |                           |
- +-------+-------+           +-------+-------+
- |       |       |           |       |       |
-```
 
-Equity    MF   Positions   Signals  Risk   Orders
-|
-v
-Paper Trading
-|
-v
-Backtesting
-|
-v
-Live Trading
-|
-v
-Kite Connect
-
-## TARGET PROJECT STRUCTURE
+## Target Project Structure
 
 strmlt_app_vk/
 |
