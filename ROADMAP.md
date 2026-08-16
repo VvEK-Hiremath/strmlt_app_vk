@@ -60,51 +60,45 @@ Eventually reach:
 
 ## Target Project Structure
 
+```text
 strmlt_app_vk/
-|
-+-- app.py
-+-- config.py
-|
-+-- kite/
-|   +-- **init**.py
-|   +-- client.py
-|   +-- auth.py
-|   +-- portfolio.py
-|   +-- market_data.py
-|   +-- orders.py
-|   +-- positions.py
-|   +-- funds.py
-|
-+-- data/
-|   +-- market.py
-|   +-- historical.py
-|   +-- storage.py
-|
-+-- strategy/
-|   +-- **init**.py
-|   +-- base.py
-|   +-- moving_average.py
-|   +-- rsi.py
-|   +-- breakout.py
-|
-+-- risk/
-|   +-- **init**.py
-|   +-- manager.py
-|   +-- rules.py
-|
-+-- execution/
-|   +-- **init**.py
-|   +-- paper.py
-|   +-- live.py
-|
-+-- ui/
-|   +-- **init**.py
-|   +-- portfolio.py
-|   +-- charts.py
-|   +-- trading.py
-|
-+-- requirements.txt
-+-- .gitignore
+├── app.py
+├── config.py
+├── requirements.txt
+├── .gitignore
+├── kite/
+│   ├── __init__.py
+│   ├── client.py
+│   ├── auth.py
+│   ├── portfolio.py
+│   ├── market_data.py
+│   ├── orders.py
+│   ├── positions.py
+│   └── funds.py
+├── data/
+│   ├── market.py
+│   ├── historical.py
+│   └── storage.py
+├── strategy/
+│   ├── __init__.py
+│   ├── base.py
+│   ├── moving_average.py
+│   ├── rsi.py
+│   └── breakout.py
+├── risk/
+│   ├── __init__.py
+│   ├── manager.py
+│   └── rules.py
+├── execution/
+│   ├── __init__.py
+│   ├── paper.py
+│   └── live.py
+└── ui/
+    ├── __init__.py
+    ├── portfolio.py
+    ├── charts.py
+    └── trading.py
+```
 
 ## DESIGN PRINCIPLE
 
@@ -156,23 +150,22 @@ Broker
 # PHASE 1 — PORTFOLIO FOUNDATION
 
 Goal:
-Build a reliable portfolio dashboard.
+- Build a reliable portfolio dashboard.
 
 Features:
-
-[✓] Zerodha authentication
-[✓] User profile
-[✓] Mutual fund holdings
-[ ] Equity holdings
-[ ] Positions
-[ ] Orders
-[ ] Funds / margins
-[ ] Total investment
-[ ] Current portfolio value
-[ ] Overall P&L
-[ ] Today's P&L
-[ ] Portfolio allocation
-[ ] Individual stock details
+- [✓] Zerodha authentication
+- [✓] User profile
+- [✓] Mutual fund holdings
+- [ ] Equity holdings
+- [ ] Positions
+- [ ] Orders
+- [ ] Funds / margins
+- [ ] Total investment
+- [ ] Current portfolio value
+- [ ] Overall P&L
+- [ ] Today's P&L
+- [ ] Portfolio allocation
+- [ ] Individual stock details
 
 Target UI:
 
@@ -193,7 +186,7 @@ Target UI:
 # PHASE 2 — MARKET DATA LAYER
 
 Goal:
-Create a clean data layer independent of the UI.
+- Create a clean data layer independent of the UI.
 
 Architecture:
 
@@ -224,32 +217,30 @@ prices = get_market_data(
 The UI should NOT need to know how Kite provides the data.
 
 Features:
-
-[ ] Live quotes
-[ ] OHLC data
-[ ] Historical candles
-[ ] Multiple timeframes
-[ ] Instrument lookup
-[ ] Market watch
-[ ] Data caching
-[ ] Local data storage if required
+- [ ] Live quotes
+- [ ] OHLC data
+- [ ] Historical candles
+- [ ] Multiple timeframes
+- [ ] Instrument lookup
+- [ ] Market watch
+- [ ] Data caching
+- [ ] Local data storage if required
 
 # PHASE 3 — CHARTS & ANALYSIS
 
 Goal:
-Visualize market and portfolio data.
+- Visualize market and portfolio data.
 
 Features:
-
-[ ] Candlestick charts
-[ ] Volume
-[ ] Moving averages
-[ ] RSI
-[ ] MACD
-[ ] Support/resistance
-[ ] Portfolio performance
-[ ] Stock performance
-[ ] Drawdown chart
+- [ ] Candlestick charts
+- [ ] Volume
+- [ ] Moving averages
+- [ ] RSI
+- [ ] MACD
+- [ ] Support/resistance
+- [ ] Portfolio performance
+- [ ] Stock performance
+- [ ] Drawdown chart
 
 Example:
 
@@ -273,7 +264,7 @@ Indicators:
 # PHASE 4 — STRATEGY ENGINE
 
 Goal:
-Create reusable trading strategies.
+- Create reusable trading strategies.
 
 Architecture:
 
@@ -309,13 +300,12 @@ Moving Average Strategy
 ```
 
 Potential strategies:
-
-[ ] Moving average crossover
-[ ] RSI strategy
-[ ] Breakout strategy
-[ ] Momentum strategy
-[ ] Mean reversion
-[ ] Custom personal strategies
+- [ ] Moving average crossover
+- [ ] RSI strategy
+- [ ] Breakout strategy
+- [ ] Momentum strategy
+- [ ] Mean reversion
+- [ ] Custom personal strategies
 
 IMPORTANT:
 
@@ -324,7 +314,7 @@ Strategy logic should NOT directly place real orders.
 # PHASE 5 — BACKTESTING ENGINE
 
 Goal:
-Test strategies against historical data before trading real money.
+- Test strategies against historical data before trading real money.
 
 Architecture:
 
@@ -362,18 +352,17 @@ Profit Factor:            1.62
 ```
 
 Metrics to track:
-
-[ ] Total return
-[ ] CAGR
-[ ] Maximum drawdown
-[ ] Win rate
-[ ] Average win
-[ ] Average loss
-[ ] Profit factor
-[ ] Number of trades
-[ ] Sharpe ratio
-[ ] Transaction costs
-[ ] Slippage
+- [ ] Total return
+- [ ] CAGR
+- [ ] Maximum drawdown
+- [ ] Win rate
+- [ ] Average win
+- [ ] Average loss
+- [ ] Profit factor
+- [ ] Number of trades
+- [ ] Sharpe ratio
+- [ ] Transaction costs
+- [ ] Slippage
 
 IMPORTANT:
 
@@ -390,7 +379,7 @@ Overfitting
 # PHASE 6 — PAPER TRADING
 
 Goal:
-Run strategies using simulated money.
+- Run strategies using simulated money.
 
 Architecture:
 
@@ -428,21 +417,20 @@ Result:
 ```
 
 Features:
-
-[ ] Virtual account balance
-[ ] Virtual positions
-[ ] Virtual orders
-[ ] Simulated fills
-[ ] P&L
-[ ] Trade history
-[ ] Strategy performance
-[ ] Slippage simulation
-[ ] Brokerage simulation
+- [ ] Virtual account balance
+- [ ] Virtual positions
+- [ ] Virtual orders
+- [ ] Simulated fills
+- [ ] P&L
+- [ ] Trade history
+- [ ] Strategy performance
+- [ ] Slippage simulation
+- [ ] Brokerage simulation
 
 # PHASE 7 — RISK ENGINE
 
 Goal:
-Prevent strategies from taking unacceptable risk.
+- Prevent strategies from taking unacceptable risk.
 
 Architecture:
 
@@ -461,18 +449,17 @@ Reject  Approve
 ```
 
 Risk controls:
-
-[ ] Maximum capital per trade
-[ ] Maximum position size
-[ ] Maximum number of positions
-[ ] Maximum daily loss
-[ ] Maximum portfolio exposure
-[ ] Stop loss
-[ ] Maximum order value
-[ ] Trading hours
-[ ] Duplicate order protection
-[ ] Circuit breaker
-[ ] Emergency kill switch
+- [ ] Maximum capital per trade
+- [ ] Maximum position size
+- [ ] Maximum number of positions
+- [ ] Maximum daily loss
+- [ ] Maximum portfolio exposure
+- [ ] Stop loss
+- [ ] Maximum order value
+- [ ] Trading hours
+- [ ] Duplicate order protection
+- [ ] Circuit breaker
+- [ ] Emergency kill switch
 
 Example:
 
@@ -499,7 +486,7 @@ Risk Engine checks:
 # PHASE 8 — ORDER MANAGEMENT
 
 Goal:
-Create a controlled interface for placing orders.
+- Create a controlled interface for placing orders.
 
 Architecture:
 
@@ -523,20 +510,19 @@ Broker      Broker
 ```
 
 Order Manager responsibilities:
-
-[ ] Create orders
-[ ] Validate orders
-[ ] Track order status
-[ ] Handle rejected orders
-[ ] Handle partial fills
-[ ] Prevent duplicate orders
-[ ] Maintain order history
-[ ] Reconcile positions
+- [ ] Create orders
+- [ ] Validate orders
+- [ ] Track order status
+- [ ] Handle rejected orders
+- [ ] Handle partial fills
+- [ ] Prevent duplicate orders
+- [ ] Maintain order history
+- [ ] Reconcile positions
 
 # PHASE 9 — LIVE TRADING
 
 Goal:
-Allow approved strategies to place real Zerodha orders.
+- Allow approved strategies to place real Zerodha orders.
 
 Architecture:
 
@@ -568,22 +554,21 @@ Zerodha
 ## LIVE TRADING SAFETY
 
 Before enabling live orders:
-
-[ ] Backtest completed
-[ ] Paper trading completed
-[ ] Strategy validated
-[ ] Risk limits implemented
-[ ] Position reconciliation implemented
-[ ] Duplicate order protection
-[ ] Error handling
-[ ] Network failure handling
-[ ] API failure handling
-[ ] Emergency stop
-[ ] Daily loss limit
-[ ] Maximum order value
-[ ] Manual override
-[ ] Trading logs
-[ ] Alerts / notifications
+- [ ] Backtest completed
+- [ ] Paper trading completed
+- [ ] Strategy validated
+- [ ] Risk limits implemented
+- [ ] Position reconciliation implemented
+- [ ] Duplicate order protection
+- [ ] Error handling
+- [ ] Network failure handling
+- [ ] API failure handling
+- [ ] Emergency stop
+- [ ] Daily loss limit
+- [ ] Maximum order value
+- [ ] Manual override
+- [ ] Trading logs
+- [ ] Alerts / notifications
 
 ## LIVE MODE SHOULD BE EXPLICIT
 
@@ -604,21 +589,20 @@ Never make live trading the default.
 # PHASE 10 — MONITORING & OPERATIONS
 
 Goal:
-Make the algo reliable when running unattended.
+- Make the algo reliable when running unattended.
 
 Features:
-
-[ ] Application logs
-[ ] Trade logs
-[ ] Strategy logs
-[ ] Error logs
-[ ] API health monitoring
-[ ] Order monitoring
-[ ] Position reconciliation
-[ ] Daily P&L monitoring
-[ ] Alerts
-[ ] Kill switch
-[ ] System health dashboard
+- [ ] Application logs
+- [ ] Trade logs
+- [ ] Strategy logs
+- [ ] Error logs
+- [ ] API health monitoring
+- [ ] Order monitoring
+- [ ] Position reconciliation
+- [ ] Daily P&L monitoring
+- [ ] Alerts
+- [ ] Kill switch
+- [ ] System health dashboard
 
 Possible alerts:
 
