@@ -29,22 +29,33 @@ Eventually reach:
 ## High-Level Architecture
 
 ```text
-                 STREAMLIT APPLICATION
-                          |
-          +---------------+---------------+
-          |                               |
-      PORTFOLIO                        TRADING
-          |                               |
-   +------+--------+             +--------+--------+
-   |      |        |             |        |        |
- Equity   MF   Positions      Signals   Risk    Orders
-    |         |                  |        |        |
-    |         |                  |        |        |
-    v         v                  v        v        v
-Paper Trading                Backtesting   Live Trading
-                           |
-                           v
-                     Kite Connect
+                    STREAMLIT APP
+                         |
+             +-----------+-----------+
+             |                       |
+             v                       v
+         PORTFOLIO                 TRADING
+             |                       |
+       +-----+-----+          +------+------+ 
+       |     |     |          |             |
+     Equity  MF  Positions   Strategy      Risk
+                               |
+                               v
+                            Signal
+                               |
+                               v
+                          +----+----+
+                          |         |
+                          v         v
+                     Backtest    Execution
+                                    |
+                              +-----+-----+
+                              |           |
+                              v           v
+                            Paper       Live
+                                         |
+                                         v
+                                    Kite Connect
 ```
 
 ## Target Project Structure
