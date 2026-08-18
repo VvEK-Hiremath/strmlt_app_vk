@@ -157,15 +157,15 @@ Features:
 - [✓] User profile
 - [✓] Mutual fund holdings
 - [✓] Equity holdings
-- [ ] Positions
-- [ ] Orders
-- [ ] Funds / margins
-- [ ] Total investment
-- [ ] Current portfolio value
-- [ ] Overall P&L
-- [ ] Today's P&L
-- [ ] Portfolio allocation
-- [ ] Individual stock details
+- [✓] Positions
+- [✓] Orders
+- [✓] Funds / margins
+- [✓] Total investment
+- [✓] Current portfolio value
+- [✓] Overall P&L
+- [✓] Today's P&L
+- [✓] Portfolio allocation
+- [✓] Individual stock details
 
 Target UI:
 

@@ -16,6 +16,7 @@ from ui.portfolio import (
     show_equity_holdings,
     show_mutual_fund_holdings,
 )
+from ui.market_data import show_market_watch
 
 
 # --------------------------------------------------
@@ -95,6 +96,7 @@ show_portfolio_summary(kite)
 show_positions(kite)
 show_orders(kite)
 show_funds(kite)
+show_market_watch(kite)
 show_equity_holdings(kite)
 show_mutual_fund_holdings(kite)
 
