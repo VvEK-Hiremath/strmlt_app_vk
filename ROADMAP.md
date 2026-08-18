@@ -156,7 +156,7 @@ Features:
 - [✓] Zerodha authentication
 - [✓] User profile
 - [✓] Mutual fund holdings
-- [ ] Equity holdings
+- [✓] Equity holdings
 - [ ] Positions
 - [ ] Orders
 - [ ] Funds / margins

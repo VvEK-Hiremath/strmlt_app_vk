@@ -9,6 +9,10 @@ from kite.auth import (
 )
 from ui.portfolio import (
     show_profile,
+    show_portfolio_summary,
+    show_positions,
+    show_orders,
+    show_funds,
     show_equity_holdings,
     show_mutual_fund_holdings,
 )
@@ -87,8 +91,11 @@ st.success("🟢 Zerodha connected")
 
 show_profile(kite)
 
+show_portfolio_summary(kite)
+show_positions(kite)
+show_orders(kite)
+show_funds(kite)
 show_equity_holdings(kite)
-
 show_mutual_fund_holdings(kite)
 
 
